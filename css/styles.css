@@ -1,12 +1,12 @@
 body {
-  background-image: url('http://www.vanessametonini.com.br/imersaocss/a1/img/fundo.jpg');
+  background: #5B8A71;
   background-size: auto 100vh; 
   font-family: Arial;
   height: 100vh;
 }
 
 .menu {
-  background-color: white;
+  background-color:#e3ecfc;
 }
 
 .menu ul {
@@ -15,11 +15,12 @@ body {
 }
 
 .menu li {
- list-style: none; 
+  font-size: 200%;
+  list-style: none;
 }
 
 a {
-  color: teal;
+  color:#457950;
   text-decoration: none;
 }
 
@@ -29,7 +30,7 @@ a:hover {
 
 .site-subtitle, 
 .site-title {
-  color: whitesmoke;
+  color:#e3ecfc;
   text-align: center;
 }
 
