@@ -7,7 +7,7 @@
 body {
   background-image:linear-gradient(-90deg,#00a896, #05668D );
   background-size: auto 100vh; 
-  font-family: Arial;
+  font-family: 'Source Code Pro', monospace;
   height: 100vh;
   font-size: 12px;
 }
@@ -51,6 +51,8 @@ header{
 
 .menu li {
   list-style: none;
+  font-family: 'Archivo Black', sans-serif;
+  background-color: pink;
 }
 
 .menu a {
@@ -66,17 +68,46 @@ a:hover {
   text-decoration: underline;
 }
 
-.site-subtitle, 
 .site-title {
   color:#e3ecfc;
   text-align: center;
+  font-family: 'Sonsie One', cursive;
 }
 
 .site-subtitle {
  font-style: italic;
+  color:#e3ecfc;
+  text-align: center;
+  font-family: 'Archivo Black', sans-serif;
+  line-height: 1.8em;
+}
+
+figcaption{
+  font-family: 'Source Code Pro', monospace;
+  color: #e3ecfc;
+}
+
+.pesquisa,
+.sobre{
+  padding: 2em;
+  height: 100vh;
+}
+
+.sobre h2 {
+  padding-bottom: 1.5em;
 }
 
 .image{
   width: 200px;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
+  object-position: left top;
+  border-radius: 10%;
+  margin: 1em
+}
+
+p{
+  font-family: 'Source Code Pro', monospace;
+  color: #e3ecfc;
+  justify-content: flex-start;
 }
