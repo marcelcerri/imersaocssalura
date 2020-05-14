@@ -35,6 +35,7 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .menu {
@@ -42,6 +43,7 @@ header{
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: 1;
 }
 
 .menu ul {
@@ -52,20 +54,41 @@ header{
 .menu li {
   list-style: none;
   font-family: 'Archivo Black', sans-serif;
-  background-color: pink;
 }
 
 .menu a {
   display: block;
   padding: 10px 20px;
+  color:#028090;
+  text-decoration: none;
+  transition: background-color, color, 1s;
+}
+
+.menu a:active,
+.menu a:hover{
+  background-color:#028090 ;
+  color: #e3ecfc;
 }
 a {
-  color:#028090;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+.titulo{
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0.5;
+  animation: linear 1s animatitulo forwards;
+}
+
+@keyframes animatitulo{
+
+ 100%{
+  transform: scale(1) translateY(0);
+  opacity: 1;
+ }
 }
 
 .site-title {
@@ -82,19 +105,24 @@ a:hover {
   line-height: 1.8em;
 }
 
-figcaption{
-  font-family: 'Source Code Pro', monospace;
-  color: #e3ecfc;
+div {
+  text-align: center;
 }
 
+
+.disciplinas,
+.contato,
 .pesquisa,
 .sobre{
   padding: 2em;
-  height: 100vh;
+  min-height: 100vh;
 }
 
+.pesquisa h2,
+.disciplinas h2,
+.contato h2,
 .sobre h2 {
-  padding-bottom: 1.5em;
+  padding-bottom: 1em;
 }
 
 .image{
@@ -103,11 +131,56 @@ figcaption{
   object-fit: cover;
   object-position: left top;
   border-radius: 10%;
-  margin: 1em
+  margin: 1em;
+  transition: transform, 500ms;
 }
 
+.image:hover{
+  transform: scale(1.2);
+}
 p{
   font-family: 'Source Code Pro', monospace;
   color: #e3ecfc;
   justify-content: flex-start;
+  padding: 0.2em;
+}
+
+.botao{
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5em;
+}
+
+.botao a{
+  background-color: #e3ecfc;
+  display: block;
+  padding: 10px 20px;
+  color: #05668D;
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 10px;
+  transition: background-color, color, 1s;
+}
+
+.botao a:active,
+.botao a:hover{
+  background-color:#028090 ;
+  color: #e3ecfc;
+  box-shadow: 5px 5px 10px #e3ecfc ;
+}
+
+.contato a{
+  text-decoration: none;
+  color: #e3ecfc;
+  font-size: 3em;
+  transition: text-shadow, 0.5s;
+}
+
+.contato a:active,
+.contato a:hover{
+  text-shadow: 0px 0px 10px #e3ecfc ;
+}
+
+.grid-icons{
+  padding-top: 3em;
 }
