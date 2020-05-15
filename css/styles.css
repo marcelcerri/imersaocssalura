@@ -8,14 +8,19 @@ body {
   background-image:linear-gradient(-90deg,#00a896, #05668D );
   background-size: auto 100vh; 
   font-family: 'Source Code Pro', monospace;
-  height: 100vh;
   font-size: 12px;
 }
 
 /*Se a tela tiver pelo menos 400 px ele irá aplicar as regras*/
-@media (min-width: 400px) {
+@media (min-width: 300px) {
   body {
-  font-size: 14px;
+  font-size: 8px;
+  }
+}
+
+@media (min-width: 375px) {
+  body {
+  font-size: 12px;
   }
 }
 
@@ -73,10 +78,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 .titulo{
   transform: scale(0.2) translateY(50vh);
   opacity: 0.5;
@@ -84,7 +85,6 @@ a:hover {
 }
 
 @keyframes animatitulo{
-
  100%{
   transform: scale(1) translateY(0);
   opacity: 1;
@@ -109,13 +109,25 @@ div {
   text-align: center;
 }
 
-
 .disciplinas,
 .contato,
 .pesquisa,
 .sobre{
-  padding: 2em;
+  padding-top: 2em;
+  padding-bottom: 1em;
   min-height: 100vh;
+}
+
+@media (min-width: 1800px){
+  .menu,
+  .disciplinas,
+  .contato,
+  .pesquisa,
+  .sobre{
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .pesquisa h2,
@@ -123,6 +135,10 @@ div {
 .contato h2,
 .sobre h2 {
   padding-bottom: 1em;
+}
+
+.sobre .profile{
+  float: left;
 }
 
 .image{
@@ -138,11 +154,43 @@ div {
 .image:hover{
   transform: scale(1.2);
 }
+
+
+
+
 p{
   font-family: 'Source Code Pro', monospace;
   color: #e3ecfc;
   justify-content: flex-start;
-  padding: 0.2em;
+  padding: 0.5em;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.box-b,
+.box {
+  font-family: 'Source Code Pro', monospace;
+  color: #e3ecfc;
+  font-size: 1.2em;
+  font-weight: 800;
+  border-radius: 5px;
+  padding: 1em;
+  height: 4em;
+}
+
+.box{
+  flex-grow: 2;
+  flex: 0 50%;
+}
+
+.box-b{
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 10px;
 }
 
 .botao{
@@ -151,6 +199,7 @@ p{
   padding: 0.5em;
 }
 
+.box-b a,
 .botao a{
   background-color: #e3ecfc;
   display: block;
@@ -162,6 +211,8 @@ p{
   transition: background-color, color, 1s;
 }
 
+.box-b a:hover,
+.box-b a:active,
 .botao a:active,
 .botao a:hover{
   background-color:#028090 ;
