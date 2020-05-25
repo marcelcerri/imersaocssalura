@@ -95,6 +95,18 @@ h1{
   margin-bottom: 0.6em;
 }
 
+.intro li{
+  list-style: none;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.programa li{
+  list-style: none;
+  margin-bottom: 0.5em;
+  text-align: justify;
+}
+
 
 table {
     border-collapse: collapse;
@@ -116,6 +128,36 @@ th {
 
 .fixed a{
   color: #e3ecfc;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 1em;
+}
+
+.box-b{
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.box-b a{
+  background-color: #e3ecfc;
+  display: block;
+  padding: 10px 20px;
+  color: #05668D;
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 10px;
+  transition: background-color, color, 1s;
+}
+
+.box-b a:hover,
+.box-b a:active{
+  background-color:#028090;
+  color: #e3ecfc;
+  box-shadow: 0px 0px 10px #e3ecfc ;
 }
 
 .footer {
